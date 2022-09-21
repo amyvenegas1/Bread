@@ -3,14 +3,16 @@ package Bread;
 public class BananaBread extends Bread{
     private int Bananas;
     private int vanilla;
-    public String recipe = " bananas, and vanilla";
+    public String recipe;
 
 
-    public BananaBread(String breadName, double cupsOfFlour, double cupsOfWater, double tspsOfSalt, double cupsOfMilk, int eggs, double tspsOfYeast, int Bananas,int vanilla) {
-        super(breadName, cupsOfFlour, cupsOfWater, tspsOfSalt, cupsOfMilk, eggs, tspsOfYeast);
-        this.Bananas = Bananas;
-        this.vanilla = vanilla;
+    public BananaBread() {
+        super("Banana",3,2,3,2,4,5,"flour, water, salt, milk, eggs, yeast, bananas, and vanilla",true);
+        this.Bananas = 4;
+        this.vanilla = 3;
     }
+
+
 
     public int getBananas() {
         return Bananas;
@@ -28,14 +30,11 @@ public class BananaBread extends Bread{
         this.vanilla = vanilla;
     }
 
-    @Override
-    public String getRecipe() {
-        return recipe;
-    }
 
     @Override
-    public void setRecipe(String recipe) {
-        this.recipe = recipe;
+    public void Bake() {
+        super.Bake();
+        System.out.println("The Banana Bread is now baked");
     }
 
     @Override
@@ -47,5 +46,9 @@ public class BananaBread extends Bread{
     @Override
     public void Recipe() {
         super.Recipe();
+    }
+
+    public String toString(){
+        return "This is from the Banana Bread subclass." + "\n";
     }
 }

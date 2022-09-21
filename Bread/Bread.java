@@ -8,10 +8,12 @@ public class Bread {
     private double cupsOfMilk;
     private int eggs;
     private double tspsOfYeast;
-    public String recipe = "flour, water, salt, milk, eggs, yeast,";
+    private String recipe;
+    public boolean isBaked;
 
 
-    public Bread(String breadName, double cupsOfFlour, double cupsOfWater, double tspsOfSalt, double cupsOfMilk, int eggs, double tspsOfYeast) {
+
+    public Bread(String breadName, double cupsOfFlour, double cupsOfWater, double tspsOfSalt, double cupsOfMilk, int eggs, double tspsOfYeast,String recipe, boolean isBaked) {
         this.breadName = breadName;
         this.cupsOfFlour = cupsOfFlour;
         this.cupsOfWater = cupsOfWater;
@@ -19,6 +21,8 @@ public class Bread {
         this.cupsOfMilk = cupsOfMilk;
         this.eggs = eggs;
         this.tspsOfYeast = tspsOfYeast;
+        this.recipe = recipe;
+        this.isBaked = isBaked;
     }
 
 
@@ -86,8 +90,21 @@ public class Bread {
         this.recipe = recipe;
     }
 
+    public boolean isBaked() {
+        return isBaked;
+    }
+
+    public void setBaked(boolean isBaked) {
+        this.isBaked = isBaked;
+    }
+
     public void Bake() {
-        System.out.println("\n" + "The bread is now baked");
+        if(isBaked = false) {
+            System.out.println("\n" + "The bread is now baked" +"\n");
+        }
+        else{
+            System.out.println("\n" + "The bread is already baked." + "\n");
+        }
     }
 
 
@@ -97,6 +114,10 @@ public class Bread {
 
 
     public void Recipe() {
-        System.out.println("\n" + "A recipe for " + breadName + " Bread: " + "\n" + "1. Mix " + recipe + "2.Make the dough" + "\n" + "3.Bulk rise");
+        System.out.println("\n" + "A recipe for " + breadName + " Bread: " + "\n" + "1. Mix " + recipe +"\n" + "2.Make the dough" + "\n" + "3.Bulk rise" + "\n" + "4.Stretch and fold the dough" + "\n" + "5.Cut and shape the dough" + "\n" + "6.Preheat the oven to 450 degrees fahrenheit" + "\n" + "7.Spray the loaf with lukewarm water" + "\n" + "8.Bake the bread at 400 degrees fahrenheit for 20 minutes, until it is a deep golden brown" + "\n" + "9.Remove the bread from the oven" + "\n" + "10. Let the bread cool until it is good to eat" + "\n");
+    }
+
+    public String toString(){
+        return "This is from the bread class." + "\n";
     }
 }

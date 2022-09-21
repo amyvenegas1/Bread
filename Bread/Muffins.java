@@ -3,12 +3,11 @@ package Bread;
 public class Muffins extends Bread{
     private int blueberries;
     private int vanilla;
-    private boolean status = false;
 
-    public Muffins(String breadName, double cupsOfFlour, double cupsOfWater, double tspsOfSalt, double cupsOfMilk, int eggs, double tspsOfYeast) {
-        super(breadName, cupsOfFlour, cupsOfWater, tspsOfSalt, cupsOfMilk, eggs, tspsOfYeast);
-        this.blueberries = blueberries;
-        this.vanilla = vanilla;
+    public Muffins() {
+        super("Muffins",4,3,1,3,4,3,"flour, water, salt, milk, eggs, yeast, blueberries, vanilla", false );
+        this.blueberries = 3;
+        this.vanilla = 3;
     }
 
     public int getBlueberries() {
@@ -30,5 +29,13 @@ public class Muffins extends Bread{
     public void getIngredients(){
         super.getIngredients();
         System.out.println(blueberries + " cup(s) of blueberries" + "\n" + vanilla + " teaspoons of vanilla");
+    }
+
+    public void Recipe(){
+        super.Recipe();
+    }
+
+    public String toString(){
+        return "This is from the Muffins subclass" + "\n";
     }
 }
