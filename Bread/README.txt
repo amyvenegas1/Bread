@@ -1,1 +1,1 @@
-
+In this program, a superclass and multiple subclasses were created to understand the cocept of inheritance. The superclass was bread and the subclasses were different types of breads. Within the superclass there are instance variables such as flour and water that are a common ingredient within all breads, therefore we use the concept of inheritance to pass on these variables from a superclas
